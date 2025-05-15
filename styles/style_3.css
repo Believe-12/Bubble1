@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 80px; /* отступ равен высоте header */
+    background-color: #f0f8ff;
+    color: #151719;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1476ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* расстояние между логотипом и меню */
+}
+
+.logo img {
+    max-height: 60px;
+    width: auto;
+}
+
+.menu {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.menu img {
+    width: 24px;
+    height: 24px;
+}
+
+.menu:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 750px; /* увеличенная ширина */
+    height: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 20px;
+    padding: 0 15px;
+    gap: 10px;
+    flex-wrap: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+    background: transparent;
+    min-width: 0;
+}
+
+
+.search-container:hover .search-input {
+    display: inline;
+}
+
+
+.profile-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.profile-container a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.profile-container a:hover {
+    color: #ffdd57;
+}
+
+.nav-img {
+    width: 24px;
+    height: 24px;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #1476ff;
+}
+
+body.dark-theme {
+    --bg-color: #2a52be;
+    --text-color: #ffffff;
+    --primary-color: #00337a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+    background-color: var(--primary-color);
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.theme-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.catalog {
+    position: absolute;
+    top: 80px; /* под хедером */
+    left: 90px; /* скорректируй под положение .menu */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: none;
+    padding: 10px 0;
+    width: 220px;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.catalog ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.catalog li {
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.catalog li:hover {
+    background-color: #f2f2f2;
+}
+
+.catalog a {
+    color: #151719;
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+}
+
+.has-submenu {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: none;
+    min-width: 180px;
+    padding: 10px 0;
+    z-index: 10000;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px 20px;
+    color: #151719;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.submenu a:hover {
+    background-color: #f2f2f2;
+}
+
+/* Показываем подменю при наведении */
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+.product-page {
+    padding: 30px;
+    font-family: "Trebuchet MS", sans-serif;
+    color: var(--text-color);
+}
+
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.product-gallery {
+    flex: 1 1 300px;
+    max-width: 600px;
+}
+
+.thumbnail-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+
+.thumbnails img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.product-info {
+    flex: 1 1 300px;
+    max-width: 500px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1476ff;
+    margin: 15px 0;
+}
+
+.btn-add {
+    background-color: #1476ff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #00337a;
+}
+
+.product-description, .product-details {
+    margin-top: 30px;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.product-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.related-products {
+    margin-top: 50px;
+}
+
+.product-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 160px;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.product-page {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+#main-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.quantity-selector {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.quantity-selector input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.size-selector {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.size-selector select {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .logo img {
+        max-height: 50px;
+    }
+
+    .menu {
+        margin-left: auto;
+    }
+
+    .search-container {
+        width: 100%;
+        margin: 10px 0;
+        order: 3;
+        flex: 1 1 100%;
+    }
+
+    .profile-container {
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 10px;
+        order: 4;
+    }
+
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-gallery,
+    .product-info {
+        max-width: 100%;
+    }
+
+    .thumbnail-row {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .product-page {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 180px;
+        margin: auto;
+    }
+
+    .product-list {
+        justify-content: center;
+    }
+
+    .catalog {
+        left: 10px;
+        width: 90%;
+    }
+
+    .submenu {
+        position: relative;
+        top: auto;
+        left: auto;
+        box-shadow: none;
+        border: none;
+    }
+
+    .catalog ul {
+        padding: 0;
+    }
+
+    .catalog li {
+        padding: 10px;
+    }
+}
+
+:root {
+    --background: #fff;
+    --text-color: #333;
+}
+
+.chart-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.chart-section h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .chart-section {
+        width: 90%;
+        padding: 10px;
+    }
+}

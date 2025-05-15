@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bubble - Детский интернет-магазин</title>
+    <link rel="icon" href="images/log.png" type="image/png">
+    <link rel="stylesheet" href="styles/style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <img src="images/logo.png" alt="logo">
+    </div>
+    <div class="menu" id="menu-btn">
+        <img src="images/menu.png" alt="dop">
+    </div>
+    <div class="search-container">
+        <img src="images/search.png" alt="search" class="search-icon">
+        <input type="text" class="search-input" placeholder="Поиск...">
+    </div>
+
+    <div class="profile-container">
+        <div class="profile">
+            <a href="profile.html"><img src="images/pro.png" alt="profile" class="nav-img">Профиль</a>
+        </div>
+        <div class="favorites">
+            <a href="#"><img src="images/heart.png" alt="" class="nav-img">Избранное</a>
+        </div>
+        <div class="korzina">
+            <a href="chart.html"><img src="images/kor.png" alt="korzina" class="nav-img">Корзина</a>
+        </div>
+    </div>
+
+    <button id="theme-toggle" class="theme-btn">
+        <img id="theme-icon" src="images/moon.png" alt="Тема"/>
+    </button>
+
+    <div id="catalog" class="catalog">
+        <ul>
+            <li class="has-submenu">
+                <a href="#">Для девочек</a>
+                <div class="submenu">
+                    <a href="#">Платья</a>
+                    <a href="#">Обувь</a>
+                    <a href="#">Юбки</a>
+                    <a href="#">Костюмы</a>
+                    <a href="#">Верхняя одежда</a>
+                    <a href="#">Футболки</a>
+                    <a href="#">Кофты</a>
+                    <a href="#">Пижама</a>
+                </div>
+            </li>
+            <li class="has-submenu">
+                <a href="#">Для мальчиков</a>
+                <div class="submenu">
+                    <a href="#">Рубашки</a>
+                    <a href="#">Брюки</a>
+                    <a href="#">Обувь</a>
+                    <a href="#">Костюмы</a>
+                    <a href="#">Верхняя одежда</a>
+                    <a href="#">Футболки</a>
+                    <a href="#">Кофты</a>
+                    <a href="#">Пижама</a>
+                </div>
+            </li>
+            <li class="has-submenu">
+                <a href="#">Для новорожденных</a>
+                <div class="submenu">
+                    <a href="#">Боди и ползунки</a>
+                    <a href="#">Комбинезоны</a>
+                    <a href="#">Шапочки</a>
+                    <a href="#">Пеленки и одеяла</a>
+                    <a href="#">Комнаты для сна</a>
+                    <a href="#">Распашонки</a>
+                </div>
+            </li>
+            <li class="has-submenu">
+                <a href="#">Игрушки</a>
+                <div class="submenu">
+                    <a href="#">Развивающие коврики</a>
+                    <a href="#">Погремушки</a>
+                    <a href="#">Конструкторы</a>
+                    <a href="#">Куклы и аксессуары</a>
+                    <a href="#">Машинки</a>
+                    <a href="#">Интерактивные игрушки</a>
+                </div>
+            </li>
+            <li class="has-submenu">
+                <a href="#">Детская электроника</a>
+                <div class="submenu">
+                    <a href="#">Умные часы</a>
+                    <a href="#">Детские планшеты</a>
+                    <a href="#">Электронные книги</a>
+                    <a href="#">Музыкальные игрушки</a>
+                    <a href="#">Радио-няни</a>
+                </div>
+            </li>
+            <li class="has-submenu">
+                <a href="#">Детский транспорт</a>
+                <div class="submenu">
+                    <a href="#">Велосипеды</a>
+                    <a href="#">Самокаты</a>
+                    <a href="#">Каталки</a>
+                    <a href="#">Коляски</a>
+                </div>
+            </li>
+            <li class="has-submenu">
+                <a href="#">Питание и кормление</a>
+                <div class="submenu">
+                    <a href="#">Бутылочки</a>
+                    <a href="#">Соски и пустышки</a>
+                    <a href="#">Подогреватели</a>
+                    <a href="#">Детские смеси</a>
+                    <a href="#">Каши и пюре</a>
+                    <a href="#">Стульчики для кормления</a>
+                </div>
+            </li>
+            <li class="has-submenu"><a href="#">Подгузники</a></li>
+            <li class="has-submenu">
+                <a href="#">Товары для малыша</a>
+                <div class="submenu">
+                    <a href="#">Ванночки и горки</a>
+                    <a href="#">Манежи</a>
+                    <a href="#">Кроватки</a>
+                    <a href="#">Гигиена и уход</a>
+                    <a href="#">Термометры</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<section class="action">
+    <img src="images/action_1.png" alt="action">
+</section>
+
+<section class="container-product">
+    <div class="product-card">
+        <a href="product_1.html">
+            <img src="images/boots/1.jpeg" alt="Кроссовки Tombi" loading="lazy">
+            <h3>Кроссовки Tombi</h3>
+            <p class="price">6 799 ₸</p>
+            <p class="description">Цветные кроссовки Tombi для мальчика. Стелька и подкладка из хлопкового текстиля
+                (100% BCI хлопок)</p>
+            <p class="rating">⭐ 4.8 (18 отзывов)</p></a>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/2.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Смесь молочная Kabrita</h3>
+        <p class="price">19 599 ₸</p>
+        <p class="description">Молочная смесь Kabrita - нежная молочная смесь на основе козьего молока для комфортного
+            пищеварения для детей от 0 до 6 месяцев.</p>
+        <p class="rating">⭐ 4.7 (13 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/3.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Толстовка Futurino</h3>
+        <p class="price">5 899 ₸</p>
+        <p class="description">Однотонная толстовка для мальчика Futurino серого цвета с нашивкой.</p>
+        <p class="rating">⭐ 4.7 (17 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/4.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Джинсовая куртка Futurino</h3>
+        <p class="price">11 899 ₸</p>
+        <p class="description">Комбинированная джинсовка для мальчика Futurino с трикотажными рукавами и капюшоном.</p>
+        <p class="rating">⭐ 4.8 (16 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/5.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/6.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/7.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/8.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/9.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/10.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/11.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/12.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/13.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/14.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/15.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/16.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/3.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/9.jpeg" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+    <div class="product-card">
+        <img src="images/1.png" alt="Игрушка динозавр" loading="lazy">
+        <h3>Игрушка динозавр</h3>
+        <p class="price">890 ₽</p>
+        <p class="description">Забавный плюшевый динозаврик, которого полюбят все малыши. Идеален для сна и игр.</p>
+        <p class="rating">⭐ 4.8 (236 отзывов)</p>
+        <button class="btn-add">Добавить в корзину</button>
+    </div>
+</section>
+
+<section class="chart-section">
+    <h2>Посещаемость сайта за последние 6 месяцев</h2>
+    <canvas id="visitorsChart"></canvas>
+</section>
+
+
+<script>
+    // Месяцы за последние полгода
+    const labels = [
+        'Ноябрь', 'Декабрь',
+        'Январь', 'Февраль',
+        'Март', 'Апрель'
+    ];
+
+    // Пример растущей статистики посетителей
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Посетители',
+            data: [1200, 1500, 1800, 2200, 2700, 3200],
+            fill: false,
+            tension: 0.2,
+            borderWidth: 3,
+            // Если используешь светлую/тёмную тему, можно подкладывать цвета через CSS-переменные:
+            borderColor: getComputedStyle(document.documentElement).getPropertyValue('--primary-color') || '#1476ff',
+            pointBackgroundColor: '#fff',
+            pointBorderWidth: 2,
+        }]
+    };
+
+    // Конфиг диаграммы
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        color: getComputedStyle(document.documentElement).getPropertyValue('--text-color') || '#151719',
+                        font: { size: 14 }
+                    }
+                },
+                tooltip: {
+                    mode: 'index',
+                    intersect: false
+                }
+            },
+            scales: {
+                x: {
+                    ticks: {
+                        color: getComputedStyle(document.documentElement).getPropertyValue('--text-color') || '#151719'
+                    },
+                    grid: { display: false }
+                },
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        color: getComputedStyle(document.documentElement).getPropertyValue('--text-color') || '#151719'
+                    },
+                    grid: {
+                        color: 'rgba(0,0,0,0.05)'
+                    }
+                }
+            }
+        }
+    };
+
+    // Инициализация
+    const ctx = document.getElementById('visitorsChart').getContext('2d');
+    new Chart(ctx, config);
+</script>
+
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Bubble. Все права защищены.</p>
+    </div>
+</footer>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 80px; /* отступ равен высоте header */
+    background-color: #f0f8ff;
+    color: #151719;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1476ff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* расстояние между логотипом и меню */
+}
+
+.logo img {
+    max-height: 60px;
+    width: auto;
+}
+
+.menu {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.menu img {
+    width: 24px;
+    height: 24px;
+}
+
+.menu:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 750px; /* увеличенная ширина */
+    height: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 20px;
+    padding: 0 15px;
+    gap: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+    background: transparent;
+    min-width: 0;
+}
+
+
+.search-container:hover .search-input {
+    display: inline;
+}
+
+
+
+.profile-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.profile-container a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.profile-container a:hover {
+    color: #ffdd57;
+}
+
+.nav-img {
+    width: 24px;
+    height: 24px;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #1476ff;
+}
+
+body.dark-theme {
+    --bg-color: #2a52be;
+    --text-color: #ffffff;
+    --primary-color: #00337a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+    background-color: var(--primary-color);
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.theme-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.auth-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-container h2 {
+    color: #1476ff;
+    margin-bottom: 20px;
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-container input {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #1476ff;
+    border-radius: 8px;
+}
+
+.auth-container button {
+    padding: 12px;
+    background-color: #1476ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-container button:hover {
+    background-color: #0d5edc;
+}
+
+#toggleText {
+    margin-top: 20px;
+}
+
+#toggleText a {
+    color: #1476ff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.zag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0; /* одинаковые отступы сверху и снизу */
+    font-size: 16px; /* поменьше шрифт */
+    padding: 0 20px; /* горизонтальные отступы */
+    color: #333;
+}
+
+.zag h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.zag a {
+    color: #1476ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.zag a:hover {
+    color: #0d5edc;
+}
